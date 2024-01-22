@@ -1,0 +1,28 @@
+// 2nd code with hashmap
+package TwoSum;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+
+public class Solution2 {
+    public static void main(String[] args) {
+        HashMap<Integer,Integer> mp=new HashMap<>();
+        int arr[]={1,3,5,7,9};
+        int n=arr.length;
+        int target=10;
+        for(int i=0; i<n; i++)
+        {
+            mp.put(arr[i],i);
+        }
+        for(int i=0; i<n; i++)
+        {
+            int com=target-arr[i];
+            if(mp.containsKey(com) && mp.get(com)!=i) {
+                System.out.println(i+""+mp.get(com));
+            }
+
+        }
+    }
+}
